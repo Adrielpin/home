@@ -1,0 +1,415 @@
+@charset "utf-8";
+#div-ftVp-ct {
+    background-color: #000;
+}
+#div-freetourVideoPlayer {
+    cursor: pointer;
+}
+#div-freetourVideoPlayer,
+#div-ftVp-ct,
+#div-ftVp-ct_wrapper {
+    height: 467px;
+    width: 830px;
+    float: left;
+}
+a.freetour-txt1,
+a.freetour-txt1,
+div.freetour-box-video {
+    background-repeat: no-repeat;
+}
+div.freetour-box-video {
+    height: 467px;
+}
+img.freetour-imgs {
+    width: 100%;
+    height: 889px;
+    border: 0;
+    outline: none;
+    background: url(../storage/2015/freetour_imgs_2.jpg) no-repeat;
+}
+.br div.freetour-box-video {
+    background-image: url(../storage/br/2015/desktop/freetou-img-video-2.jpg);
+}
+.en div.freetour-box-video {
+    background-image: url(../storage/en/2015/desktop/freetou-img-video-2.jpg);
+}
+.mx div.freetour-box-video {
+    background-image: url(../storage/mx/2015/desktop/freetou-img-video-2.jpg);
+}
+.only-tablet {
+    display: none;
+}
+.only-mobile {
+    display: none;
+}
+#div-freetour-zoom {
+    margin-bottom: 10px;
+    position: relative;
+    clear: both;
+}
+#div-freetour-zoom img {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    z-index: 1;
+}
+#div-freetour-zoom a.x {
+    position: relative;
+    z-index: 2;
+}
+.freetour-plan span.titulo-desc {
+    display: block;
+    text-align: center;
+    height: 26px;
+}
+.promo span.titulo-desc {
+    height: 44px;
+    line-height: 31px;
+    font-size: 48px;
+    color: #ff6000;
+    font-weight: 700;
+}
+.freetour-plan {
+    background-color: #f2f2f2;
+    display: inline-block;
+    width: 506px;
+    height: 245px;
+    float: left;
+    margin-bottom: 8px;
+}
+.freetour-plan div.linha {
+    height: 222px;
+    border-left: 1px solid #3e3e3e;
+    margin-top: 13px;
+}
+.freetour-plan div.planline {
+    background-color: #6ca727;
+    color: #FFF;
+    width: 412px;
+    height: 30px;
+    line-height: 25px;
+    margin: 0 auto 2px;
+    overflow: hidden;
+}
+.freetour-plan div.planline > span {
+    display: inline-block;
+    height: inherit;
+    line-height: inherit;
+    overflow: hidden;
+}
+.freetour-plan span.plan-txt1 {
+    width: 112px;
+    padding-left: 10px;
+    font-size: 14px;
+    font-weight: 500;
+}
+.freetour-plan span.plan-txt2,
+.promo span.plan-txtPromo,
+.promo2 span.plan-txtPromo {
+    width: 106px;
+    font-size: 18px;
+    font-weight: 700;
+}
+.freetour-plan span.plan-txt3 {
+    font-weight: 700;
+    font-size: 14px;
+    color: #ff6000;
+}
+.freetour-plan span.plan-txt3 > span.pdN {
+    font-weight: 400;
+    font-size: 11px;
+    color: #FFF;
+    padding-right: 22px;
+    white-space: nowrap;
+}
+.promo span.plan-txt1,
+.promo span.plan-txt2,
+.promo span.plan-txtPromo,
+.promo span.plan-txt3 {
+    width: 96px !important;
+}
+.en .promo span.plan-txt1,
+.en .promo span.plan-txt2,
+.en .promo span.plan-txtPromo,
+.en .promo span.plan-txt3 {
+    width: 105px !important;
+}
+.promo span.plan-txt2,
+.promo2 span.plan-txt2 {
+    color: #cfe2b8;
+    text-decoration: line-through;
+    font-weight: 400 !important;
+}
+.freetour-plan span.pdN > strong {
+    font-weight: 400;
+}
+.freetour-plan a.bt-assinar {
+    width: 412px;
+    height: 54px;
+    background-repeat: no-repeat;
+    margin: 6px auto 2px;
+    display: block;
+    color: transparent;
+}
+.br .freetour-plan a.bt-assinar {
+    background-image: url(../storage/br/2015/desktop/bt-assinar.png);
+}
+.en .freetour-plan a.bt-assinar {
+    background-image: url(../storage/en/2015/desktop/bt-assinar.png);
+}
+.mx .freetour-plan a.bt-assinar {
+    background-image: url(../storage/mx/2015/desktop/bt-assinar.png);
+}
+.en .freetour-plan div.planline,
+.mx .freetour-plan div.planline,
+.en .freetour-plan a.bt-assinar,
+.mx .freetour-plan a.bt-assinar {
+    width: 443px;
+}
+.freetour-plan2 span.titulo-desc {
+    height: 180px;
+}
+.promo2 span.titulo-desc {
+    height: 100px;
+    margin-top: 150px;
+    font-size: 39px;
+    color: #ff6000;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.promo2 span.titulo-desc span {
+    color: #3e3e3e;
+    font-weight: 500;
+    display: block;
+    font-size: 32px;
+}
+.freetour-plan2 {
+    float: right;
+    height: 467px;
+    width: 389px;
+    background-repeat: no-repeat;
+    background-position: 0 40px;
+}
+.promo2 {
+    background-position: top center;
+}
+.br .freetour-plan2 {
+    background-image: url(../storage/br/2015/desktop/freetour-txt2-v11.png);
+}
+.en .freetour-plan2 {
+    background-image: url(../storage/en/2015/desktop/freetour-txt2-v11.png);
+}
+.mx .freetour-plan2 {
+    background-image: url(../storage/mx/2015/desktop/freetour-txt2-v11.png);
+}
+.br .freetour-plan2 a.bt-assinar {
+    background-image: url(../storage/br/2015/desktop/bt-assinar-rodape.png);
+}
+.en .freetour-plan2 a.bt-assinar {
+    background-image: url(../storage/en/2015/desktop/bt-assinar-rodape.png);
+}
+.mx .freetour-plan2 a.bt-assinar {
+    background-image: url(../storage/mx/2015/desktop/bt-assinar-rodape.png);
+}
+.freetour-plan2 div.planline,
+.freetour-plan2 a.bt-assinar,
+.en .freetour-plan2 div.planline,
+.mx .freetour-plan2 div.planline,
+.en .freetour-plan2 a.bt-assinar,
+.mx .freetour-plan2 a.bt-assinar {
+    width: 356px !important;
+}
+.freetour-plan2 a.bt-assinar {
+    height: 58px;
+}
+.freetour-plan2 span.plan-txt1 {
+    padding-left: 12px;
+    width: 130px;
+}
+.freetour-plan2 span.plan-txt2 {
+    width: 142px;
+}
+.freetour-plan2 span.plan-txt3 > span.pdN {
+    display: none;
+}
+.promo2 span.plan-txt3 > span.pdN {
+    display: inline-block !important;
+    font-size: 10px !important;
+}
+.promo2 span.plan-txt1 {
+    width: 75px !important;
+    font-size: 13px !important;
+}
+.promo2 span.plan-txt2,
+.promo2 span.plan-txtPromo {
+    width: 88px !important;
+}
+.promo2 span.plan-txt3 {
+    width: 70px !important;
+}
+.br .promo2 span.plan-txt2,
+.br .promo2 span.plan-txtPromo {
+    width: 82px !important;
+}
+.br .promo2 span.plan-txt3 {
+    width: 80px !important;
+}
+a.freetour-txt1 {
+    background-color: #f2f2f2;
+    height: 245px;
+    width: 724px;
+    display: inline-block;
+    float: left;
+}
+.br a.freetour-txt1 {
+    background-image: url(../storage/br/2015/desktop/freetour-txt1-v13.png);
+}
+.en a.freetour-txt1 {
+    background-image: url(../storage/en/2015/desktop/freetour-txt1-v13.png);
+}
+.mx a.freetour-txt1 {
+    background-image: url(../storage/mx/2015/desktop/freetour-txt1-v13.png);
+}
+a.freetour-banner-vv {
+    height: 286px;
+    clear: both;
+    display: block;
+    margin-bottom: 8px;
+    cursor: pointer;
+    text-decoration: none;
+    background-repeat: no-repeat;
+}
+.br a.freetour-banner-vv {
+    background-image: url(../storage/br/2015/desktop/freetour-banner-vanessa.jpg);
+}
+.en a.freetour-banner-vv {
+    background-image: url(../storage/en/2015/desktop/freetour-banner-vanessa.jpg);
+}
+.mx a.freetour-banner-vv {
+    background-image: url(../storage/mx/2015/desktop/freetour-banner-vanessa.jpg);
+}
+/*
+.en .promo span.plan-txt1 { font-size:12px !important;     width: 84px !important; }
+.en .promo span.plan-txt2, .en .promo span.plan-txtPromo  { font-size:17px !important; width: 86px !important; }
+.en .promo span.plan-txt3 { font-size:13px !important; }
+.en .promo2 span.plan-txt1 { width:94px !important;  }
+.mx .promo span.plan-txt1 { width: 80px !important; }
+.mx .promo span.plan-txt2, .mx .promo span.plan-txtPromo  { font-size:17px !important; width: 86px !important; }
+.mx .promo span.plan-txt3 { font-size:13px !important; }
+*/
+/* regras tablet 980vp */
+
+@media (max-width: 980px) {
+    .only-desktop {
+        display: none;
+    }
+    .only-tablet {
+        display: block;
+    }
+    .only-mobile {
+        display: none;
+    }
+    img.freetour-imgs {
+        height: 792px;
+        background-size: cover;
+    }
+    a.freetour-txt1 {
+        float: none;
+        background-position: center center;
+        background-size: contain;
+        width: auto;
+        display: block;
+    }
+    .freetour-plan {
+        display: block;
+        float: none;
+        width: auto;
+        margin-top: 8px;
+        background-position: 20px 40px;
+        background-repeat: no-repeat;
+        padding-left: 380px;
+    }
+    .freetour-plan div.linha {
+        border: 0px;
+        height: auto;
+        margin: 0;
+        padding-top: 10px;
+    }
+    .br .freetour-plan {
+        background-image: url(../storage/br/2015/desktop/freetour-txt2-v11.png);
+    }
+    .en .freetour-plan {
+        background-image: url(../storage/en/2015/desktop/freetour-txt2-v11.png);
+    }
+    .mx .freetour-plan {
+        background-image: url(../storage/mx/2015/desktop/freetour-txt2-v11.png);
+    }
+    .freetour-plan2 {
+        display: none;
+    }
+    div.freetour-box-video,
+    #div-freetourVideoPlayer,
+    #div-ftVp-ct {
+        background-size: contain;
+        width: 920px;
+        height: 520px;
+    }
+    a.freetour-banner-vv {
+        height: 214px;
+    }
+    .br a.freetour-banner-vv {
+        background-image: url(../storage/br/2015/tablet/freetour-banner-vanessa.jpg);
+    }
+    .en a.freetour-banner-vv {
+        background-image: url(../storage/en/2015/tablet/freetour-banner-vanessa.jpg);
+    }
+    .mx a.freetour-banner-vv {
+        background-image: url(../storage/mx/2015/tablet/freetour-banner-vanessa.jpg);
+    }
+}
+/* regras mobile 650vp */
+
+@media (max-width: 650px) {
+    .only-desktop {
+        display: none;
+    }
+    .only-tablet {
+        display: none;
+    }
+    .only-mobile {
+        display: block;
+    }
+    .bbox-c-clean {
+        width: 610px;
+        margin: 10px auto 0;
+    }
+    img.freetour-imgs {
+        height: 858px;
+        background-size: cover;
+    }
+    .br .freetour-plan,
+    .en .freetour-plan,
+    .mx .freetour-plan {
+        padding-left: 0px;
+        background-image: none;
+    }
+    div.freetour-box-video,
+    #div-freetourVideoPlayer,
+    #div-ftVp-ct {
+        width: 610px;
+        height: 345px;
+        float: none;
+    }
+    a.freetour-banner-vv {
+        height: 141px;
+    }
+    .br a.freetour-banner-vv {
+        background-image: url(../storage/br/2015/mobile/freetour-banner-vanessa.jpg);
+    }
+    .en a.freetour-banner-vv {
+        background-image: url(../storage/en/2015/mobile/freetour-banner-vanessa.jpg);
+    }
+    .mx a.freetour-banner-vv {
+        background-image: url(../storage/mx/2015/mobile/freetour-banner-vanessa.jpg);
+    }
+}

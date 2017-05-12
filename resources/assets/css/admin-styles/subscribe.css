@@ -1,0 +1,608 @@
+@charset "utf-8";
+/* header */
+
+#div-assine-topo {
+    background: url(../2015/assine-img.jpg) no-repeat top left;
+    height: 408px;
+    margin-bottom: 30px;
+}
+#div-assine-topo .top-txt {
+    width: 535px;
+    height: 386px;
+    float: right;
+    margin: 12px 70px 0 0;
+    background-repeat: no-repeat;
+}
+.br #div-assine-topo .top-txt {
+    background-image: url(../storage/br/2015/desktop/assine-txt5.png);
+    position: relative;
+}
+.en #div-assine-topo .top-txt {
+    background-image: url(../storage/en/2015/desktop/assine-txt5.png);
+    background-position: center left;
+}
+.mx #div-assine-topo .top-txt {
+    background-image: url(../storage/mx/2015/desktop/assine-txt5.png);
+    background-position: center left;
+}
+.en .top-txt a {
+    display: none;
+}
+.br .top-txt a {
+    height: 30px;
+    position: absolute;
+    top: 317px;
+    width: 120px;
+}
+.mx .top-txt a {
+    display: none;
+}
+#div-alert-box .atencao {
+    background-repeat: no-repeat;
+    height: 72px;
+    background-position: top center;
+}
+#div-alert-box {
+    text-align: center;
+}
+#div-alert-box div.red {
+    font-weight: 500;
+    font-size: 20px;
+}
+.br #div-alert-box .atencao {
+    background-image: url(../storage/br/2015/assine-atencao.png);
+}
+.en #div-alert-box .atencao {
+    background-image: url(../storage/en/2015/assine-atencao.png);
+}
+.mx #div-alert-box .atencao {
+    background-image: url(../storage/mx/2015/assine-atencao.png);
+}
+#div-alert-box div {
+    margin-bottom: 15px;
+    padding: 0 30px;
+    font-size: 16px;
+}
+.assine-box-exp {
+    margin-bottom: 18px;
+    padding: 15px 10px;
+    background-color: #f2f2f2;
+    text-align: center;
+    font-size: 22px;
+}
+.assine-box-exp span {
+    display: block;
+    font-weight: 700;
+    color: #b20000;
+    font-size: 34px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+.assine-box1 {
+    margin: 10px 0;
+    padding: 15px 10px;
+    background-color: #f2f2f2;
+    border-bottom: 1px solid #a0a0a0;
+    border-top: 1px solid #a0a0a0;
+}
+.assine-box1 h2,
+.assine-box2 h2 {
+    font-size: 22px;
+    height: 48px;
+    line-height: 48px;
+    overflow: hidden;
+    text-align: center;
+    text-transform: uppercase;
+    font-style: italic;
+    font-weight: 700;
+}
+.assine-box1 div.info,
+.assine-box2 div.info,
+.assine-box1 h3,
+.assine-box2 h3 {
+    font-size: 14px;
+    text-align: center;
+    color: #747474;
+    padding: 8px 124px;
+}
+.assine-box2 div.info {
+    padding: 0;
+    font-size: 12px;
+    line-height: 18px;
+}
+.assine-box1 h3 {
+    font-size: 18px;
+    margin-bottom: 14px;
+}
+div.selo-ssl {
+    float: right;
+    margin-top: 1px;
+    font-size: 10px;
+}
+.assine-box1 > table {
+    margin: 0 auto;
+    width: 80%;
+}
+.assine-box1 input[type=radio] {
+    margin: 10px 10px 10px 20px;
+}
+.assine-box1 > table td {
+    border-bottom: 2px solid #f2f2f2;
+    background-color: #6ca727;
+    color: #fff;
+    height: 40px;
+    font-size: 19px;
+}
+.tdHead {
+    color: #FFFFFF;
+    background-color: #3f6c0b !important;
+    height: 25px !important;
+}
+.assine-box2 {
+    width: 620px;
+    margin: 0 auto 10px;
+}
+.assine-box2 .bg {
+    background-color: #f2f2f2;
+    padding: 12px 16px;
+    margin-bottom: 10px;
+}
+.assine-box2 .bg > div {
+    margin-bottom: 5px;
+}
+.assine-box2 div.small {
+    font-size: 12px;
+    text-align: right;
+    color: #747474;
+    margin: 5px 0 0;
+}
+.assine-box2 div.small strong {
+    font-weight: 500;
+}
+.assine-box2 div.small a {
+    color: #747474;
+}
+.assine-box2 h2 {
+    font-size: 20px;
+}
+.assine-form1 span {
+    font-size: 14px;
+    font-weight: 500;
+    width: 186px;
+    height: 46px;
+    line-height: 46px;
+    display: inline-block;
+    text-align: right;
+    text-transform: uppercase;
+}
+.assine-form1 h3 > span {
+    display: inline;
+    width: auto;
+    height: auto;
+    line-height: inherit;
+    font-size: inherit;
+    text-align: inherit;
+}
+.assine-form1 input[type=text],
+.assine-form1 input[type=password],
+.assine-form1 select {
+    font-size: 16px;
+    border: 0;
+    border-radius: 6px;
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    background-color: #fff;
+    width: 370px;
+    height: 46px;
+    float: right;
+    color: #747474;
+    padding: 0 10px;
+}
+.assine-form1 .bg div {
+    position: relative;
+}
+.assine-form1 select {
+    width: 390px;
+}
+.assine-form1 input[type=checkbox] {
+    margin: 10px;
+}
+.assine-form1 .termos {
+    font-size: 11px;
+    line-height: 14px;
+    height: 150px;
+    border: 1px solid #cecece;
+    padding: 18px;
+    overflow: auto;
+    text-align: justify;
+}
+.assine-form1 div.campoRequerido {
+    color: #b20000;
+    font-size: 12px;
+    font-weight: normal;
+    height: 18px;
+    position: absolute;
+    text-align: right;
+    top: 0px;
+    left: 0;
+    width: 582px;
+    z-index: 10;
+}
+.assine-form1 button,
+.pag-titulo {
+    font-size: 22px;
+    width: 620px;
+    height: 52px;
+    line-height: 50px;
+    text-transform: uppercase;
+    background-color: #f2f2f2;
+    text-align: center;
+    font-weight: 500;
+    margin-bottom: 16px;
+    font-family: inherit;
+    color: #111;
+    letter-spacing: normal;
+    cursor: pointer;
+}
+.assine-form1 button:hover,
+.assine-form1 button:active {
+    background-color: #b20000;
+    color: #fff;
+}
+form.opcs {
+    text-align: center;
+    font-size: 14px;
+}
+form.opcs div.info {
+    margin: 10px 0;
+}
+table.cc td {
+    text-align: left;
+}
+table.cc td strong {
+    display: block;
+    text-align: right;
+    font-weight: 500;
+}
+table.cc input,
+table.cc select {
+    font-family: monospace;
+    font-size: 16px;
+    padding: 4px 6px;
+    background-color: #f1f1f1;
+    border-radius: 6px;
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    border: 1px solid #ccc;
+    line-height: 30px;
+}
+
+form.opcs button {
+    font-size: 20px;
+    display: block;
+    margin: 20px 0 20px 190px;
+    color: #FFF;
+    font-weight: 700;
+    background-color: #ff6000;
+    height: 45px;
+    min-width: 245px;
+    letter-spacing: normal;
+    border-radius: 6px;
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    font-family: inherit;
+}
+.mx form.opcs button {
+    min-width: 300px;
+}
+.en form.opcs button {
+    min-width: 265px;
+}
+form.opcs button span {
+    background: url("../storage/2015/assine-bt-check.png") no-repeat;
+    display: inline-block;
+    height: 15px;
+    line-height: 15px;
+    width: 23px;
+}
+form.opcs .opc-container {
+    padding-bottom: 15px;
+}
+form.opcs input[type=radio] {
+    margin: 10px;
+}
+form.opcs .opc-container img {
+    vertical-align: top;
+}
+.plan-day,
+.plan-day1 {
+    color: #b20000 !important;
+    font-weight: bold;
+}
+.pdN {
+    color: #FFF;
+    font-weight: 400;
+    margin-right: 10px;
+}
+.padding-left {
+    padding-left: 50px;
+}
+.plan-value,
+.plan-value1 {
+    color: #FFF;
+    font-weight: bold;
+}
+#spanHelpCCC {
+    background: url('../storage/imagens/assine-ico-help.jpg') no-repeat;
+    width: 18px;
+    height: 18px;
+    display: inline-block;
+    vertical-align: middle;
+}
+#div-help-ccc {
+    position: absolute;
+    z-index: 10;
+    width: 300px;
+    height: 311px;
+    background: url('../storage/imagens/assine-instr-dig-card.png') no-repeat;
+}
+/* finish */
+
+#div-subscribe-finish {
+    width: 920px;
+    margin: 10px auto;
+    text-align: center;
+}
+#div-subscribe-finish div {
+    margin: 20px 0;
+}
+#div-subscribe-finish .pag-box {
+    margin: 10px 0;
+    height: 90px;
+    background-repeat: no-repeat;
+    background-position: top center;
+}
+#div-subscribe-finish .pag-box a {
+    width: 520px;
+    height: 75px;
+    margin: 136px auto 0;
+    display: inline-block;
+}
+#div-subscribe-finish .boleto a {
+    margin: 0 !important;
+}
+#div-subscribe-finish .paypal,
+#div-subscribe-finish .transf,
+#div-subscribe-finish .ccbill,
+#div-subscribe-finish .pagseguro {
+    height: 264px !important;
+}
+.en #div-subscribe-finish .quase-la {
+    background-image: url(../storage/en/2015/assine-quase-la.png);
+}
+.en #div-subscribe-finish .parabens {
+    background-image: url(../storage/en/2015/assine-parabens.png);
+}
+.mx #div-subscribe-finish .parabens {
+    background-image: url(../storage/mx/2015/assine-parabens.png);
+}
+.mx #div-subscribe-finish .quase-la {
+    background-image: url(../storage/mx/2015/assine-quase-la.png);
+}
+.br #div-subscribe-finish .parabens {
+    background-image: url(../storage/br/2015/assine-parabens.png);
+}
+.br #div-subscribe-finish .quase-la {
+    background-image: url(../storage/br/2015/assine-quase-la.png);
+}
+.br #div-subscribe-finish .pagseguro {
+    background-image: url(../storage/br/2015/assine-finish-pagseguro.png);
+}
+.br #div-subscribe-finish .transf {
+    background-image: url(../storage/br/2015/assine-finish-transferencia.png);
+}
+#div-subscribe-finish .boleto {
+    background-image: url(../storage/br/2015/assine-finish-boleto.gif);
+}
+.tit-falta-pouco {
+    text-align: center;
+    font-size: 30px;
+    font-weight: 700;
+    color: #000;
+}
+.tit-falta-pouco span {
+    font-size: 50px;
+    color: #b50505;
+    display: block;
+}
+.msg-debito {
+    font-size: 23px;
+    text-align: center;
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+    padding: 15px 0;
+}
+.msg-itau,
+.msg-acesso {
+    font-size: 20px;
+    text-align: center;
+    font-weight: 700;
+}
+.msg-acesso {
+    border-top: 1px solid #000;
+    padding: 15px 0;
+}
+.msg-itau img {
+    margin-top: 20px;
+}
+.assine-box1 {
+    margin: 20px auto 0;
+    width: 880px;
+    border: none;
+}
+.assine-box1 div.info {
+    font-size: 13px;
+    font-style: italic;
+    margin: 5px 0;
+    padding: 0;
+}
+.assine-box1 > table {
+    width: 91%
+}
+#div-assine-topo {
+    margin-bottom: 24px;
+}
+.assine-linegray {
+    border-top: 1px solid #9f9f9f;
+    height: 20px;
+}
+.assine-fs {
+    width: 822px;
+    margin: 0 auto 10px;
+    background-color: #f2f2f2;
+    padding-left: 78px;
+    background-image: url(../storage/2015/icone-cadeado.png);
+    background-position: 32px 10px;
+    background-repeat: no-repeat;
+    font-size: 28px;
+    font-style: italic;
+    font-weight: 600;
+    height: 53px;
+    line-height: 47px;
+}
+.assine-fs span {
+    float: right;
+    width: 436px;
+    margin: 8px 12px 0 0;
+    line-height: normal;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+}
+.assine-form1 button {
+    background-color: #ff6000;
+    color: #ffffff;
+}
+.assine-btl {
+    text-align: center;
+}
+.assine-btl a {
+    width: 412px;
+    height: 70px;
+    background-color: #ff6000;
+    color: #ffffff;
+    font-style: italic;
+    font-size: 18px;
+    font-weight: 600;
+    margin: 10px 4px 0;
+    display: inline-block;
+    cursor: pointer;
+    text-decoration: none;
+    border-radius: 8px;
+    -moz-border-radius: 8px;
+    -webkit-border-radius: 8px;
+    overflow: hidden;
+    text-transform: uppercase;
+    line-height: 66px;
+}
+.assine-imgcc {
+    height: 331px;
+    background-repeat: no-repeat;
+    background-position: top center;
+}
+.br .assine-imgcc {
+    background-image: url(../storage/2015/assine-bandeiras-br.jpg);
+}
+.en .assine-imgcc,
+.mx .assine-imgcc {
+    height: 101px;
+    background-image: url(../storage/2015/assine-bandeiras-en-e-mx.jpg);
+}
+@media (max-width: 980px) {
+    #div-assine-topo .top-txt {
+        width: 395px;
+        height: 300px;
+        margin: 60px 10px 0 0;
+        background-size: contain;
+    }
+    .padding-left {
+        padding-left: 40px;
+    }
+    .assine-box1 div.info {
+        padding: 8px 200px;
+    }
+    div.selo-ssl {
+        margin-top: 20px;
+    }
+    .assine-box-exp {
+        padding: 15px 80px;
+    }
+}
+@media (max-width: 650px) {
+    #div-assine-topo {
+        height: auto;
+        padding-top: 420px;
+    }
+    #div-assine-topo .top-txt {
+        float: none;
+        width: 533px;
+        height: 390px;
+        margin: 0 auto;
+        background-size: contain;
+    }
+    .assine-form1 button,
+    .pag-titulo {
+        font-size: 30px;
+    }
+    .assine-box1 > table {
+        width: auto;
+    }
+    .padding-left {
+        padding-left: 15px;
+    }
+    .assine-box1 div.info {
+        padding: 4px 0;
+    }
+    div.selo-ssl {
+        margin-top: 20px;
+    }
+    .hide-mobile {
+        display: none;
+    }
+    .assine-box-exp {
+        padding: 15px 10px;
+    }
+    .assine-btl a {
+        width: 296px;
+        height: 52px;
+        line-height: 50px;
+        font-size: 13px;
+        margin: 10px 2px 0;
+    }
+    .assine-fs {
+        width: 610px;
+        padding: 0;
+        height: 105px;
+        text-align: center;
+        background-position: 82px 8px;
+    }
+    .assine-fs span {
+        display: block;
+        float: none;
+        text-align: center;
+        width: 90%
+    }
+    .assine-box1 {
+        padding: 0;
+        width: auto;
+        margin: 10px 0;
+    }
+    .assine-imgcc {
+        background-size: contain;
+        height: 70px;
+    }
+    .br .assine-imgcc {
+        background-size: contain;
+        height: 220px;
+    }
+}

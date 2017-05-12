@@ -1,0 +1,139 @@
+#div-mb-addmenu {
+  display: none;
+}
+
+.mb-ico-add a {
+  background-image: url(../storage/2015/mb-add-pasta.png);
+  background-position: 0 14px;
+  background-repeat: no-repeat;
+  height: inherit;
+  width: 25px;
+}
+
+.mb-ico-add h4 {
+  cursor: pointer;
+}
+
+.mb-ico-folder {
+  background-image: url(../storage/2015/mb-ico-folder1.png);
+}
+
+.mb-ico-fav {
+  background-image: url(../storage/2015/mb-favoritas.png);
+}
+
+.mb-ico-v {
+  background-image: url(../storage/2015/mb-ico-v2.png) !important;
+  color: #007f00;
+}
+
+#div-mb-addmenu {
+  height: auto;
+  width: 290px;
+}
+
+.album-novo {
+  margin: 10px 0 10px 10px;
+}
+
+.album-novo button, .album-novo input {
+  vertical-align: top;
+  border-radius: 4px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+}
+
+.album-novo button {
+  font-family: inherit;
+  padding: 0;
+  margin: 0 0 0 2px;
+  letter-spacing: normal;
+  height: 37px;
+  width: 68px;
+  background-color: #000;
+  font-size: 13px;
+}
+
+.album-novo input {
+  background-color: #f2f2f2;
+  border: 1px solid #ccc;
+  color: #747474;
+  font-size: 14px;
+  padding: 0 8px;
+  margin: 0;
+  width: 172px;
+  height: 35px;
+  line-height: 35px;
+}
+
+.album-list {
+  max-height: 245px;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.album-list > li {
+  line-height: 35px;
+}
+
+.album-list > li label {
+  font-size: 15px;
+  display: block;
+  padding-left: 20px;
+  white-space: nowrap;
+}
+
+.album-list > li label:hover , .album-opcs > li a:hover {
+  background-color: #e9e9e9;
+}
+
+.album-list > li input {
+  margin-right: 5px;
+}
+
+.album-opcs {
+  margin: 10px 0 0;
+}
+
+.album-opcs button {
+  font-family: inherit;
+  padding: 0;
+  border-radius: 6px;
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  letter-spacing: normal;
+  height: 40px;
+  width: 240px;
+  background-color: #000;
+  font-size: 16px;
+}
+
+.album-opcs > li {
+  line-height: 38px;
+  font-size: 14px;
+}
+
+.album-opcs > li a {
+  display: block;
+}
+
+.album-opcs > li span {
+  background-repeat: no-repeat;
+  background-position: left center;
+  margin-left: 20px;
+  padding-left: 26px;
+}
+
+.album-opcs > li.mb-add {
+  text-align: center;
+  border-bottom: 1px solid #e9e9e9;
+  padding-bottom: 10px;
+}
+
+/* regras tablet 980vp */
+@media (max-width: 980px) {
+}
+
+/* regras mobile 650vp */
+@media (max-width: 650px) {
+}

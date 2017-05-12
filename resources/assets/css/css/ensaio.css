@@ -1,0 +1,167 @@
+#banner-call-to-action {
+  display: none;
+}
+
+.model-header {
+  position: relative;
+}
+
+.model-header h1 {
+  float: left;
+  height: 34px;
+  display: inline-block;
+  font-weight: 500;
+  font-size: 28px;
+  margin-right: 20px;
+  line-height: 33px;
+}
+
+.model-header h1.n1 {
+  font-size: 26px;
+}
+
+.model-header h1.n2 {
+  font-size: 25px;
+}
+
+.model-header h1.n3 {
+  font-size: 18px;
+}
+/*
+#div-model-header-fotos {
+  display: none;
+}*/
+
+.model-header ul {
+  vertical-align: top;
+  height: 34px;
+  display: inline-block;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#ul-model-subm li {
+  font-size: 15px;
+  padding: 0 4px  0 8px;
+  border: none !important;
+}
+
+.model-header a.icomenu {
+  height: 34px;
+  margin: 0 20px;
+}
+
+.model-header a.tablet {
+  display: none;
+}
+
+li.on a {
+  color: #b20000;
+}
+
+#div-ensaio-opcs {
+  float: right;
+  text-align: right;
+}
+  
+  /* oculta nome de modelo em video (menu) */
+.menu-video h1 {
+  display: none;
+}
+  
+  /* regras tablet 980vp */  
+@media (max-width: 1230px) {
+  
+  .model-header h1 {
+    margin-right: 16px;
+  }
+
+  .model-header h1.n1 {
+    font-size: 25px;
+  }
+
+  .model-header h1.n2 {
+    font-size: 24px;
+  }
+
+  .model-header h1.n3 {
+    font-size: 16px;
+  }
+
+  .model-header a.tablet {
+    display: inline-block;
+    margin-right: 0px;
+  }
+
+  #ul-model-subm {
+    top: 33px;
+    left: 718px;
+    width: 200px;
+    height: auto;
+    display: none;
+  }
+
+  #ul-model-subm li {
+    display: block;
+    border: 0;
+    text-align: left;
+    padding: 0;
+  }
+
+  #ul-model-subm a {
+    display: block;
+    margin: 0;
+    padding: 0 35px;
+    font-size: 16px;
+    color: #000;
+  }
+
+  #ul-model-subm li a:hover {
+    background-color: #e9e9e9;
+  }
+}
+
+/* regras mobile 650vp */
+@media (max-width: 915px) {
+  
+  .model-header h1 {
+    font-size: 25px;
+    display: block;
+  }
+
+  .model-header h1.n1 {
+    font-size: 23px;
+  }
+
+  .model-header h1.n2 {
+    font-size: 21px;
+  }
+
+  .model-header h1.n4 {
+    font-size: 15px;
+  }
+
+  .model-header a.tablet {
+    margin: 0;
+    width: 50px;
+    background-size: 100% auto;
+  }
+
+  #ul-model-subm {
+    left: 310px;
+    top: 58px;
+    width: 300px;
+  }
+
+  #ul-model-subm li {
+    line-height: 64px;
+    height: 65px;
+  }
+
+  #ul-model-subm li a {
+    font-size: 38px;
+    text-align: right;
+    letter-spacing: 0.4pt;
+  }
+}
