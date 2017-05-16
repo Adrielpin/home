@@ -61,11 +61,11 @@ Route::group(['as' => 'modelos.','prefix'=>'modelos'], function() {
 	Route::get('/videos', ['as' => 'videos', 'uses' => 'Web\ModelosController@allVideos']);
 	
 	Route::get('/{modelo}/photo', ['as' => 'photo','uses' => 'Web\ModelosController@photo']);
-	Route::get('/{modelo}/video', ['as' => 'video','uses' => 'Web\ModelosController@video']);
-	Route::get('/{modelo}/perfil', ['as' => 'perfil','uses' => 'Web\ModelosController@perfil']);
-	Route::get('/{modelo}/makingoff', ['as' => 'makingoff','uses' => 'Web\ModelosController@makingoff']);
-	Route::get('/{modelo}/wallpaper', ['as' => 'wallpaper','uses' => 'Web\ModelosController@wallpaper']);
-	Route::get('/{modelo}/creditos', ['as' => 'creditos','uses' => 'Web\ModelosController@creditos']);
+	// Route::get('/{modelo}/video', ['as' => 'video','uses' => 'Web\ModelosController@video']);
+	// Route::get('/{modelo}/perfil', ['as' => 'perfil','uses' => 'Web\ModelosController@perfil']);
+	// Route::get('/{modelo}/makingoff', ['as' => 'makingoff','uses' => 'Web\ModelosController@makingoff']);
+	// Route::get('/{modelo}/wallpaper', ['as' => 'wallpaper','uses' => 'Web\ModelosController@wallpaper']);
+	// Route::get('/{modelo}/creditos', ['as' => 'creditos','uses' => 'Web\ModelosController@creditos']);
 });
 
 Route::group(['as' => 'colunas.','prefix'=>'colunas'], function() {

@@ -81,6 +81,19 @@ class EssayController extends Controller
         }
 
         return redirect('admin/essay');
+    }
+
+    /**
+     * Display the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function show($id)
+    {
+
+        $essay = Essay::find($id);
+        return view('admin.essay.show')->with(['essay' => $essay]);
     }   
 
     /**
@@ -107,8 +120,8 @@ class EssayController extends Controller
 
     public function destroy($id)
     {
-         $essay = Essay::find($id);
-         $essay->delete();
-         return redirect('admin/essay');
-    }
+     $essay = Essay::find($id);
+     $essay->delete();
+     return redirect('admin/essay');
+ }
 }

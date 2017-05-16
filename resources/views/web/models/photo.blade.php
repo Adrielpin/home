@@ -97,6 +97,7 @@
 					<ul class="partB" onclick="BellaAssay.toggleParts(this)">
 						<li>Parte 1</li>
 					</ul>
+					
 					<ul>
 						<li class="s0"><a id="a-secao-1" href="#1.1" class="on">Seção 01</a></li>
 						<li class="s1"><a id="a-secao-2" href="#2.1">Seção 02</a></li>
@@ -110,9 +111,11 @@
 						<li class="s1"><a id="a-secao-10" href="#10.1">Seção 10</a></li>
 						<li class="s0"><a id="a-secao-11" href="#11.1">Seção 11</a></li>
 					</ul>
+					
 					<ul class="partB partM" title="125" onclick="BellaAssay.toggleParts(this)">
 						<li>Parte 2</li>
 					</ul>
+
 					<ul class="hide">
 						<li class="s0"><a id="a-secao-12" href="#12.1">Seção 12</a></li>
 						<li class="s1"><a id="a-secao-13" href="#13.1">Seção 13</a></li>

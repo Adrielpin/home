@@ -22,7 +22,7 @@ class photosController extends Controller
     {
 
         $essay = Essay::find($id);
-        return view('admin.ensaios.fotos.index')->with(['essay' => $essay]);
+        return view('admin.essay.photos.index')->with(['essay' => $essay]);
 
     }
 

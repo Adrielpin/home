@@ -20,9 +20,7 @@ class ModelosController extends Controller
     {
 
         $essays = Essay::paginate(24);
-        $selector = Essay::lists('name','id');
-
-        dd($essay);
+        $selector = Essay::pluck('name','id');
 
         return view('web.models.photos')->with(['essays' => $essays, 'selector' => $selector]);
 
@@ -47,6 +45,7 @@ class ModelosController extends Controller
     public function photo($url){
         $id = self::show($url);
         $essay = Essay::find($id);
+
         return view('web.models.photo')->with(['essay' => $essay]);
     }
 

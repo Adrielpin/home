@@ -9,7 +9,7 @@ use App\Http\Controllers\Controller;
 
 use Storage;
 use App\Models\Essay; 
-use App\Models\Essay_parts;
+use App\Models\Essay_part;
 
 class partsController extends Controller
 {
@@ -34,7 +34,7 @@ class partsController extends Controller
     public function create($id)
     {
         $essay = Essay::find($id);
-        return view('admin.ensaios.fotos.partes.create')->with(['essay' => $essay]);
+        return view('admin.essay.photos.parts.create')->with(['essay' => $essay]);
     }
 
     /**
@@ -46,16 +46,12 @@ class partsController extends Controller
     public function store($id, Request $request)
     {
 
-        $part = new Essay_parts();
+        $part = new Essay_part();
         $part->name = $request->name;
         $part->essay_id = $id;
         $part->save();
 
-        $folder = 'essays/'.$part->essay->name.'/'.$part->name;
-
-        Storage::disk('public')->makeDirectory($folder);
-        
-        return redirect()->route('admin.essay.photos.index', ['id' => $id]);
+        return redirect()->route('admin.essay.show.photos.index', ['id' => $id]);
     }
 
     /**
@@ -66,10 +62,10 @@ class partsController extends Controller
      */
     public function edit($id, $partid)
     {
-      $essay = Essay::find($id);
-      $part = Essay_parts::find($partid);
-      return view('admin.ensaios.fotos.partes.edit')->with(['essay' => $essay, 'part' => $part]);
-  }
+        
+        $part = Essay_part::find($partid);
+        return view('admin.essay.photos.parts.edit')->with(['essay' => $part->essay,'part' => $part]);
+    }
 
     /**
      * Update the specified resource in storage.
@@ -80,11 +76,11 @@ class partsController extends Controller
      */
     public function update(Request $request, $id, $partid)
     {
-        $part = Essay_parts::find($partid);
+        $part = Essay_part::find($partid);
         $part->name = $request->name;
         $part->save();
 
-        return redirect()->route('admin.essay.photos.index', ['id' => $id]);
+        return redirect()->route('admin.essay.show.photos.index', ['id' => $id]);
 
     }
 
@@ -96,8 +92,7 @@ class partsController extends Controller
      */
     public function destroy($id, $partid)
     {
-        Essay_parts::find($partid)->delete();
-
-        return redirect()->route('admin.essay.photos.index', ['id' => $id]);
+        Essay_part::find($partid)->delete();
+        return redirect()->route('admin.essay.show.photos.index', ['id' => $id]);
     }
 }

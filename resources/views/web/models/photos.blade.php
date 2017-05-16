@@ -56,7 +56,7 @@
 
 			<h2>
 				<a class="" href="{{ route('modelos.photo',$essay->url) }}">
-					<img src="{{ Storage::url('essays/'. $essay->name.'/'. $essay->photos[0]->name )}}" alt="{{ $essay->name }}" width="180" height="132">
+					<img src="{{ '/storage/home/'. $essay->homes[0]->name }}" alt="{{ $essay->name }}" width="180" height="132">
 					<br>{{ $essay->name }}
 				</a>
 			</h2>

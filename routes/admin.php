@@ -44,7 +44,6 @@ Route::group(['as' => 'essay.','prefix'=>'essay'], function() {
 	Route::get('', ['as' => 'index', 'uses' => 'Admin\Essay\EssayController@index']);
 	Route::get('criar', ['as' => 'create','uses' => 'Admin\Essay\EssayController@create']);
 	Route::post('salvar', ['as' => 'store','uses' => 'Admin\Essay\EssayController@store']);
-	Route::get('{id}/visualizar', ['as' => 'show','uses' => 'Admin\Essay\EssayController@show']);
 	Route::get('{id}/editar', ['as' => 'edit','uses' => 'Admin\Essay\EssayController@edit']);
 	Route::post('{id}/atualizar', ['as' => 'update','uses' => 'Admin\Essay\EssayController@update']);
 	Route::get('{id}/remover', ['as' => 'destroy','uses' => 'Admin\Essay\EssayController@destroy']);	
@@ -59,6 +58,40 @@ Route::group(['as' => 'essay.','prefix'=>'essay'], function() {
 		Route::post('{id}/atualizar', ['as' => 'update','uses' => 'Admin\Essay\ModelsController@update']);
 		Route::get('{id}/remover', ['as' => 'destroy','uses' => 'Admin\Essay\ModelsController@destroy']);	
 
+	});
+
+
+	Route::group(['as' => 'show.', 'prefix' => '{id}/show'], function () {
+
+		Route::get('/', ['as' => 'index','uses' => 'Admin\Essay\EssayController@show']);
+
+		Route::group(['as' => 'photos.', 'prefix' => 'photos'], function () {
+
+			Route::get('/', ['as' => 'index', 'uses' => 'Admin\Essay\photosController@index']);
+
+			Route::group(['as' => 'parts.', 'prefix' => 'parts'], function () {
+					
+				Route::get('criar', ['as' => 'create','uses' => 'Admin\Essay\partsController@create']);
+				Route::post('salvar', ['as' => 'store','uses' => 'Admin\Essay\partsController@store']);
+				Route::get('{partid}/editar', ['as' => 'edit','uses' => 'Admin\Essay\partsController@edit']);
+				Route::post('{partid}/atualizar', ['as' => 'update','uses' => 'Admin\Essay\partsController@update']);
+				Route::get('{partid}/remover', ['as' => 'destroy','uses' => 'Admin\Essay\partsController@destroy']);
+
+				Route::group(['as' => 'section.', 'prefix' => '{partid}/section'], function () {		
+
+					Route::get('', ['as' => 'index', 'uses' => 'Admin\Essay\sectionController@index']);
+					Route::get('criar', ['as' => 'create','uses' => 'Admin\Essay\sectionController@create']);
+					Route::post('salvar', ['as' => 'store','uses' => 'Admin\Essay\sectionController@store']);
+					Route::get('{sectionid}/editar', ['as' => 'edit','uses' => 'Admin\Essay\sectionController@edit']);
+					Route::post('{sectionid}/atualizar', ['as' => 'update','uses' => 'Admin\Essay\sectionController@update']);
+					Route::get('{sectionid}/remover', ['as' => 'destroy','uses' => 'Admin\Essay\sectionController@destroy']);
+
+				});
+
+			});
+
+		});
+		
 	});
 
 });

@@ -6,11 +6,16 @@ use Illuminate\Database\Eloquent\Model;
 
 class Essay extends Model
 {
-    protected $table = 'essays';
+	protected $table = 'essays';
 
-    public function homes()
-    {
-        return $this->hasMany('App\Models\Essay_home','essay_id');
-    }
+	public function homes()
+	{
+		return $this->hasMany('App\Models\Essay_home','essay_id');
+	}
+
+	public function parts()
+	{
+		return $this->hasMany('App\Models\Essay_part','essay_id');
+	}
 
 }

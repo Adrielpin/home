@@ -1,4 +1,4 @@
-@extends('admin.ensaios.partials.menu')
+@extends('admin.essay.partials.menu')
 @section('page_title',' - informações')
 
 @section('forms') 
@@ -29,8 +29,8 @@
 				<td>{{ $part->name}}</td>
 				<td>{{ count($part->sections) }}</td>
 				<td>
-					<a href="{{ route('admin.essay.photos.parts.edit', [$essay->id, $part->id] ) }}" class="btn btn-default"> editar </a>
-					<a href="{{ route('admin.essay.photos.parts.destroy', [$essay->id, $part->id] ) }}" class="btn btn-default"> remover </a>
+					<a href="{{ route('admin.essay.show.photos.parts.edit', [$essay->id, $part->id] ) }}" class="btn btn-default"> editar </a>
+					<a href="{{ route('admin.essay.show.photos.parts.destroy', [$essay->id, $part->id] ) }}" class="btn btn-default"> remover </a>
 				</td>
 
 			</tr>
@@ -45,7 +45,7 @@
 
 	<div class="btn-group">
 
-		<a href="{{ route('admin.essay.photos.parts.create', [$essay->id]) }}" class="btn btn-default">Adicionar parte</a>
+		<a href="{{ route('admin.essay.show.photos.parts.create', [$essay->id]) }}" class="btn btn-default">Adicionar parte</a>
 		
 	</div>
 

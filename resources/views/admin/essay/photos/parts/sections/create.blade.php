@@ -1,4 +1,4 @@
-@extends('admin.ensaios.partials.menu')
+@extends('admin.essay.partials.menu')
 @section('page_title',' - informações')
 
 @section('forms') 
@@ -7,7 +7,7 @@
 
 	<div class='col-sm-12' style="margin-top: 10px;">
 
-		{!! Form::open(array('route' => ['admin.essay.photos.parts.section.store',$essay->id, $part->id], 'class' => 'form-group', 'files' => true)) !!}
+		{!! Form::open(array('route' => ['admin.essay.show.photos.parts.section.store',$essay->id, $part->id], 'class' => 'form-group', 'files' => true)) !!}
 
 		<div class="form-group">
 
@@ -22,29 +22,29 @@
 
 		<div class="form-group">
 
-			{!! Form::label('images[]', 'imagens da seção', ['class' => 'control-label']) !!}	
-			{!! Form::file('images[]',['multiple'=>true,'id' => 'images']) !!}
+         {!! Form::label('images[]', 'imagens de capa', ['class' => 'control-label']) !!} 
+         {!! Form::file('images[]',['multiple'=>true,'id' => 'images']) !!}
 
-		</div>
-
-
-		<div class="form-group">
-
-			{!! Form::label('thumbs[]', 'thumbs da seção', ['class' => 'control-label']) !!}	
-			{!! Form::file('thumbs[]',['multiple'=>true,'id' => 'thumbs']) !!}
-
-		</div>
-
-		<div class="form-group">
-
-			{!! Form::submit('Salvar', ['class' => 'btn btn-primary', 'onclick' => 'close();']) !!}
-
-		</div>
+     </div>
 
 
-		{{ Form::close() }}
+     <div class="form-group">
 
-	</div>
+         {!! Form::label('thumbs[]', 'thumbs da seção', ['class' => 'control-label']) !!}	
+         {!! Form::file('thumbs[]',['multiple'=>true,'id' => 'thumbs']) !!}
+
+     </div>
+
+     <div class="form-group">
+
+         {!! Form::submit('Salvar', ['class' => 'btn btn-primary', 'onclick' => 'close();']) !!}
+
+     </div>
+
+
+     {{ Form::close() }}
+
+ </div>
 
 </div>
 

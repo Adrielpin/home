@@ -1,4 +1,4 @@
-@extends('admin.ensaios.partials.menu')
+@extends('admin.essay.partials.menu')
 @section('page_title',' - informações')
 
 @section('forms') 
@@ -7,7 +7,7 @@
 
 	<div class='col-sm-12' style="margin-top: 10px;">
 
-		{!! Form::open(array('route' => ['admin.essay.photos.parts.store',$essay->id], 'class' => 'form-group', 'files' => true)) !!}
+		{!! Form::open(array('route' => ['admin.essay.show.photos.parts.store',$essay->id], 'class' => 'form-group', 'files' => true)) !!}
 
 		<div class="form-group">
 

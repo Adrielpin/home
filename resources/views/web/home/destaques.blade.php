@@ -32,15 +32,10 @@
 
                 <h1>
 
-                    <a id="adh1" href="https://www.belladasemana.com.br/modelos/fernanda-liberato" title="{{ $essays[0]->name }}">
+                    <a id="adh1" href="{{ route('modelos.photo', $essays[0]->url) }}" title="{{ $essays[0]->name }}">
                         <img src="//:0" title="lançamento da semana" width="610" height="450" class="destaques firstSlide" style="background-image: url('{{ '/storage/home/' . $essays[0]->homes[rand(0, (count($essays[0]->homes)-1))]->name }}')">
+                        <span class="text">{{ $essays[0]->name }}</span>
                     </a>
-
-                    <span class="text">{{ $essays[0]->name }}</span>
-
-                    <span class="ht">
-                        {{ $essays[0]->description }}
-                    </span>
 
                 </h1>
 
@@ -48,8 +43,8 @@
 
             <h2>
 
-                <a class="boxhome bxd1" href="https://www.belladasemana.com.br/modelos/barbara-fontenelle">
-                    <img src="//:0" title="ultima modelo" class="destaques secondSlide" width="300" height="220" style="background-image: url('{{ '/storage/home/' . $essays[1]->homes[rand(0, (count($essays[1]->homes)-1))]->name }}')">
+                <a class="boxhome bxd1" href="#">
+                    <img src="//:0" title="ultima modelo" class="destaques secondSlide" width="300" height="220" style="background-image: url('{{ '/storage/home/' . $essays[1]->homes[0]->name }}')">
                     <span class="text no-label">{{ $essays[1]->name }}</span>
                 </a>
 
@@ -57,8 +52,8 @@
 
             <h2>
 
-                <a class="boxhome bxd2" href="https://www.belladasemana.com.br/modelos/fernanda-liberato">
-                    <img src="//:0" title="Mais modelos" class="destaques tirdSlide" width="300" height="220" style="background-image: url('{{ '/storage/home/' . $essays[2]->homes[rand(0, (count($essays[2]->homes)-1))]->name }}')">
+                <a class="boxhome bxd2" href="#">
+                    <img src="//:0" title="Mais modelos" class="destaques tirdSlide" width="300" height="220" style="background-image: url('{{ '/storage/home/' . $essays[2]->homes[0]->name }}')">
                     <span class="text no-label">{{ $essays[2]->name }}</span>
                 </a>
 
@@ -75,18 +70,5 @@
     <script type="text/javascript">
 
         window.setInterval(firstSlide, 6000, {!! $essays[0]->homes !!})
-        point = 0;
-        index =0;
-
-        function firstSlide(array) 
-        {
-            while(point == index){
-                index = Math.floor((Math.random() * (array.length - 1)) + 1);
-            }
-
-            point = index;
-            var image = '/storage/home/'+ array[index].name;
-            jQuery('.firstSlide').css({'background-image': 'url(' + image + ')'});
-        }
 
     </script>

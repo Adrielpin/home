@@ -1,4 +1,4 @@
-@extends('admin.ensaios.partials.menu')
+@extends('admin.essay.partials.menu')
 @section('page_title',' - informações')
 
 @section('forms') 
@@ -10,7 +10,7 @@
 
 		<legend>Editar</legend>
 
-		{!! Form::open(array('route' => ['admin.essay.photos.parts.update',$essay->id, $part->id], 'class' => 'form-group')) !!}
+		{!! Form::open(array('route' => ['admin.essay.show.photos.parts.update',$part->essay->id, $part->id], 'class' => 'form-group')) !!}
 
 		<div class="form-group">
 
@@ -53,11 +53,11 @@
 				<tr>
 					<td>{{ $section->id}}</td>
 					<td>{{ $section->name}}</td>
-					<td>{{ count($section->files) }}</td>
+					<td>{{ count($section->photos) }}</td>
 					<td>
 
-						<a href="{{ route('admin.essay.photos.parts.section.edit', [$essay->id, $part->id, $section->id] ) }}" class="btn btn-default"> editar </a>
-						<a href="{{ route('admin.essay.photos.parts.section.destroy', [$essay->id, $part->id, $section->id] ) }}" class="btn btn-default"> remover </a>
+						<a href="{{ route('admin.essay.show.photos.parts.section.edit', [$part->essay->id, $part->id, $section->id] ) }}" class="btn btn-default"> editar </a>
+						<a href="{{ route('admin.essay.show.photos.parts.section.destroy', [$essay->id, $part->id, $section->id] ) }}" class="btn btn-default"> remover </a>
 
 					</td>
 				</tr>
@@ -73,9 +73,10 @@
 
 	<div class="btn-group">
 
-		<a href="{{ route('admin.essay.photos.parts.section.create', [ $essay->id, $part->id]) }}" class="btn btn-primary"> Criar seção </a>
+		<a href="{{ route('admin.essay.show.photos.parts.section.create', [ $essay->id, $part->id]) }}" class="btn btn-primary"> Criar seção </a>
 
 	</div>
+	
 </div>
 
 

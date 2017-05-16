@@ -8,10 +8,11 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
 use Storage;
+
 use App\Models\Essay;
-use App\Models\Essay_parts;
-use App\Models\Essay_sections;
-use App\Models\Essay_files;
+use App\Models\Essay_part;
+use App\Models\Essay_section;
+use App\Models\Essay_photo;
 
 class sectionController extends Controller
 {
@@ -33,10 +34,10 @@ class sectionController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function create($id, $partid)
-    {   
-        $essay = Essay::find($id);
-        $part = Essay_parts::find($partid);
-        return view('admin.ensaios.fotos.sections.create')->with(['essay' => $essay, 'part' => $part]);
+    {
+        
+        $part = Essay_part::find($partid);
+        return view('admin.essay.photos.parts.sections.create')->with(['essay' => $part->essay, 'part' => $part]);
     }
 
     /**
@@ -48,35 +49,42 @@ class sectionController extends Controller
     public function store($id, $partid, Request $request)
     {
 
-        $section = new Essay_sections();
+        $section = new Essay_section();
         $section->name = $request->name;
         $section->part_id = $partid;
-        $section->active = $request->active;
         $section->save();
 
-        $essay = Essay_sections::find($section->id)->part->essay->name;
-
-        $part = $section->part->name;
-        
-
-        $folder = $essay.'/'.$part.'/'.$section->name;
+        $part = $section->part->name;        
 
         $files = $request->file('images');
+        $thumbs = $request->file('thumbs');
 
         foreach ($files as $k => $file) {
-            $name = date('usiHdmY').$file->getClientOriginalName();
-            $f = new Essay_files();
+
+            $extFile = pathinfo($file->getClientOriginalName(),PATHINFO_EXTENSION);
+            $fileName = basename($file->getClientOriginalName(), '.'.$extFile);
+            $fileName = hash('md5', $fileName).'.'.$extFile;
+
+
+
+            $f = new Essay_photo();
             $f->section_id = $section->id;
-            $f->name = $name;
+            $f->file = $fileName;
+            Storage::disk('public')->put('essays/'.$fileName, file_get_contents($file));
+
+            $extFile = pathinfo($thumbs[$k]->getClientOriginalName(),PATHINFO_EXTENSION);
+            $fileName = basename($thumbs[$k]->getClientOriginalName(), '.'.$extFile);
+            $fileName = hash('md5', $fileName).'.'.$extFile;
+
+
+            $f->thumb = $fileName;
             $f->save();
 
-            Storage::disk('public')->put('essays/'.$folder.'/'.$name, file_get_contents($file));
+            Storage::disk('public')->put('essays/'.$fileName, file_get_contents($thumbs[$k]));
 
         }
 
-        $request->session()->flash('alert-success', 'Artigo cadastrado com sucesso.');
-
-        return redirect()->route ('admin.essay.photos.parts.edit', [$id, $partid]);
+        return redirect()->route('admin.essay.show.photos.parts.edit', [$id, $partid]);
     }
 
     /**
@@ -98,7 +106,7 @@ class sectionController extends Controller
      */
     public function edit($id, $partid, $sectionid)
     {   
-        $section = Essay_sections::find($sectionid);
+        $section = Essay_section::find($sectionid);
         $part = $section->part;
         $essay = $part->essay;
 
