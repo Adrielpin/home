@@ -110,7 +110,7 @@ class sectionController extends Controller
         $part = $section->part;
         $essay = $part->essay;
 
-        return view('admin.ensaios.fotos.sections.edit')->with(['essay' => $essay, 'part' => $part, 'section' => $section ]);
+        return view('admin.essay.photos.parts.sections.edit')->with(['essay' => $essay, 'part' => $part, 'section' => $section ]);
     }
 
     /**

@@ -1,4 +1,4 @@
-@extends('admin.ensaios.partials.menu')
+@extends('admin.essay.partials.menu')
 @section('page_title',' - informações')
 
 @section('forms') 
@@ -10,7 +10,7 @@
 
 		<legend>Editar</legend>
 
-		{!! Form::open(array('route' => ['admin.essay.photos.parts.update',$essay->id, $part->id], 'class' => 'form-group')) !!}
+		{!! Form::open(array('route' => ['admin.essay.show.photos.parts.section.update',$essay->id, $part->id, $section->id], 'class' => 'form-group')) !!}
 
 		<div class="form-group">
 
@@ -35,33 +35,35 @@
 
 	<fieldset>
 
-		<legend>Seções</legend>
+		<legend>{{ $section->name . ' - ' . count($section->photos) . ' inseridas'}}</legend>
 
-		@if (count($section->files) > 0 )
+		@if (count($section->photos) > 0 )
 
 		<table class="table table-hover">
 
 			<thead>
 
 				<tr>
-					<th>#</th>
-					<th>Name</th>
+
+					<th>thumb</th>	
+					<th>file</th>
 					<th>Ações</th>
+
 				</tr>
 
 			</thead>
 
 			<tbody>
 
-				@foreach ($section->files as $file)
+				@foreach ($section->photos as $photo)
 				<tr>
 
-					<td>{{ $file->id}}</td>
-					<td>{{ $file->name}}</td>
+					<td>{{ $photo->thumb}}</td>
+					<td>{{ $photo->file}}</td>
 					<td>
 
-					<a href="{{ route('admin.essay.photos.parts.section.edit', [$essay->id, $part->id, $section->id] ) }}" class="btn btn-default"> editar </a>
-						<a href="{{ route('admin.essay.photos.parts.section.destroy', [$essay->id, $part->id, $section->id] ) }}" class="btn btn-default"> remover </a>
+					<a href="{{ route('admin.essay.show.photos.parts.section.edit', [$essay->id, $part->id, $section->id] ) }}" class="btn btn-default"> editar </a>
+						<a href="{{ route('admin.essay.show.photos.parts.section.destroy', [$essay->id, $part->id, $section->id] ) }}" class="btn btn-default"> remover </a>
 
 					</td>
 				</tr>
@@ -78,7 +80,7 @@
 
 	<div class="btn-group">
 
-		<a href="{{ route('admin.essay.photos.parts.section.create', [ $essay->id, $part->id]) }}" class="btn btn-primary"> Criar seção </a>
+		<a href="{{ route('admin.essay.show.photos.parts.section.create', [ $essay->id, $part->id]) }}" class="btn btn-primary"> Criar seção </a>
 
 	</div>
 	

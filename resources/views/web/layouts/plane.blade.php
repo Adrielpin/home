@@ -25,19 +25,21 @@
 	<script type="text/javascript" src="https://d335luupugsy2.cloudfront.net/js/rdstation-popups/stable/rdstation-popup.min.js"></script>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
-
+	
 	<link rel="stylesheet" type="text/css" href="{{ asset('assets/portal.css') }}">
-	
-	
+
+	<script type="text/javascript" src="{{ asset('assets/portal.js') }}"></script>
+
 </head>
 
 <body class="br">
 
-	<script type="text/javascript" src="{{ asset('assets/portal.js') }}"></script>
-
 	<!-- Colocar o tag mananger aqui!!!! --> 
 
 	@yield('menu')
+
+
 	
 </body>
+
 </html>	
