@@ -13,12 +13,12 @@
 
 		<div class="model-header">
 
-			<h1 class="n1">Vanessa Vailatti</h1>
+			<h1 class="n1">{{ $essay->name }}</h1>
 
 			<div id="div-model-header-fotos">
 				<div class="fs icoSecoes">
-					<h4 onclick="BellaAssay.showSecoes()"></h4>
-					<a onclick="BellaAssay.showSecoes()"></a>
+					<h4 onclick="BellaAssay.showSecoes();"></h4>
+					<a onclick="BellaAssay.showSecoes();"></a>
 				</div>
 
 				<div class="fs icoZoom">
@@ -131,7 +131,9 @@
 					@foreach ($section->photos as $photo)
 
 					<li class="{{ '/storage/essays/'. $photo->file }}">
-						<a style="background-image:url({{ '/storage/essays/'. $photo->thumb }})"></a>
+
+						<a style="background-image:url({{ '/storage/essays/'.$photo->thumb }})"></a>
+
 					</li>
 
 					@endforeach
@@ -144,7 +146,6 @@
 				@endforeach				
 
 				<br class="clearfloat">
-
 
 				<a class="btAssineEnsaioSecoes bannerCta" href="/assine"></a>
 
@@ -178,13 +179,11 @@
 					<a class="bannerVerticalLateralFoto bannerCta" style="left:98px" href="{{ route('assine.index') }}"></a>
 					<a class="bannerVerticalLateralFoto bannerCta" style="left:778px" href="{{ route('assine.index') }}"></a>
 
-					<img id="imgFE_1_1" style="height: auto; width: auto; left: 292px;" src="https://ia.bella.com.br/vanessa_vailatti/fotos/101.jpg" onload="BellaAssay.fotoShow(1,1,this.id)" onerror="BellaAssay.FotoLoadError(this.id)" ondblclick="BellaAssay.zoomStart()" class="https://ia.bella.com.br/vanessa_vailatti/fotos/101.jpg undefined">
+					<img src="/storage/img/essay.png" class="imgView">
 
 				</div>    
 
 			</div>
-
-
 
 			<br class="clearfloat">    
 
@@ -193,7 +192,14 @@
 		<div class="bbox-end-line"></div>
 		<br>
 		
-	</div>     
+	</div>
+
+	<style type="text/css">
+		.imgView{
+			background-position: center;
+			background-repeat: no-repeat;
+		}
+	</style>     
 
 	<script type="text/javascript">
 		
@@ -203,10 +209,17 @@
 
 			jQuery('.section a').click(function () {
 
-				jQuery('.isSec').hide();
-				
+				jQuery('.isSec').hide();								
 				name = jQuery(this).attr('name');
 				jQuery('ul[name="' + name + '"]').show();
+
+			});
+
+			jQuery('.isSec li').click(function (event){
+
+				img = jQuery(this).attr('class');
+				jQuery('.imgView').css({'height': '100%', 'width': '100%', 'left': '0px','background-image':'url('+img+')'});
+
 			});
 
 		});
@@ -219,57 +232,8 @@
 		<div class="text">
 
 			<div align="justify">
-				<p>&nbsp;</p>
-				<h2 id="m_-3676559654912172710docs-internal-guid-4ee9f044-815c-ee68-bc89-979d30567016" dir="ltr">Vanessa Vailatti</h2>
-				<p style="text-align: center; font-size: 15px;">&nbsp;</p>
-				<p dir="ltr">Dona de um corpo escultural e um rosto expressivo e hipnotizante, a modelo Vanessa Vailatti (que tamb&eacute;m atende pelo nome de Vanessinha) &eacute; uma taurina de personalidade e convic&ccedil;&atilde;o, daquelas que nunca deixam para tr&aacute;s suas origens. Natural de Santa Catarina e estudante de Educa&ccedil;&atilde;o F&iacute;sica,&nbsp;Vanessa &eacute; a grande vencedora do Concurso Bella da Semana&nbsp;(etapa Feijoada do Cacau) e seu ensaio fotogr&aacute;fico foi mais um presente para os assinantes do site mais quente da web.</p>
-				<p style="text-align: center; font-size: 15px;">&nbsp;</p>
-				<p dir="ltr">Aqui na Bella da Semana voc&ecirc; se deleita com&nbsp;<a href="https://www.belladasemana.com.br/modelos/vanessa-vailatti/video" target="_blank" rel="noopener noreferrer" data-saferedirecturl="https://www.google.com/url?hl=pt-BR&amp;q=https://www.belladasemana.com.br/modelos/vanessa-vailatti/video&amp;source=gmail&amp;ust=1492610495578000&amp;usg=AFQjCNFMS53pr8oTwnaFQ0BiFBr1bprODA">Vanessa Vailatti completamente nua&nbsp;</a>pelas lentes do fot&oacute;grafo Alex Ribeiro e curte momentos de puro prazer e beleza. Reserve um momento para voc&ecirc; mesmo e prepare-se para uma agrad&aacute;vel surpresa.</p>
-				<h3 dir="ltr">There she goes: Vanessa Vailatti pelada em um ensaio fotogr&aacute;fico de tirar o f&ocirc;lego</h3>
-				<p style="text-align: center; font-size: 15px;">&nbsp;</p>
-				<p dir="ltr">N&atilde;o foi a primeira vez que Vanessa Vailatti posou nua para o fot&oacute;grafo Alex Ribeiro: ambos j&aacute; se conheciam via redes sociais e j&aacute; haviam feito um ensaio de nudez. Por isso, as fotos ficaram deslumbrantes: &agrave; vontade e se divertindo bastante, a modelo se deixou fotografar e, por meio dos registros, descobrimos por que&nbsp;Vanessinha&nbsp;foi a grande vencedora do Concurso!</p>
-				<p style="text-align: center; font-size: 15px;">&nbsp;</p>
-				<p dir="ltr">Com l&aacute;bios carnudos, uma pele acetinada e formas perfeitas, a modelo catarinense faz jus ao t&iacute;tulo recebido: determinada, cuida do corpo com dietas e muita malha&ccedil;&atilde;o, com treinos acompanhados por seu personal trainer particular. Voluptuosa e cheia de atitude, Vanessa Vailatti &eacute; uma mulher rom&acirc;ntica, que gosta de usar lingerie sexy e tomar um vinho ao som de uma boa m&uacute;sica. Segundo a modelo, estes s&atilde;o os tr&ecirc;s ingredientes principais de uma noite especial e inesquec&iacute;vel.</p>
-				<p style="text-align: center; font-size: 15px;">&nbsp;</p>
-				<p dir="ltr">Quando o assunto &eacute; fantasia sexual, Vanessa curte uma aventura mais ousada e arriscada, em lugares p&uacute;blicos. Inclusive, essa del&iacute;cia de 1,64 m j&aacute; matou a vontade em uma praia! Quem ter&aacute; sido o sortudo premiado? Uma outra particularidade dessa deusa &eacute; o fato de sexo no primeiro encontro n&atilde;o ser um tabu para ela. Segundo a modelo, o importante na vida &eacute; viver intensamente e n&atilde;o se preocupar com regras preestabelecidas. A galera vibra: nada mais sexy do que uma mulher decidida, n&atilde;o &eacute; mesmo?</p>
-				<p style="text-align: center; font-size: 15px;">&nbsp;</p>
-				<h3 dir="ltr">Quer ficar pertinho de Vanessa Vailatti? Venha para o clube mais secreto da web!</h3>
-				<p style="text-align: center; font-size: 15px;">&nbsp;</p>
-				<p dir="ltr">O Bella da Semana &eacute; um clube repleto de vantagens para o usu&aacute;rio. Motivos para assinar n&atilde;o faltam:</p>
-				<p style="text-align: center; font-size: 15px;">&nbsp;</p>
-				<ol>
-					<li dir="ltr" style="list-style-type: disc;">
-						<p dir="ltr">Sua identidade &eacute; preservada, portanto, sua assinatura &eacute; sigilosa. No recibo banc&aacute;rio ou no extrato do cart&atilde;o de cr&eacute;dito n&atilde;o aparecer&aacute; o nome do site</p>
-					</li>
-					<li dir="ltr" style="list-style-type: disc;">
-						<p dir="ltr">Seus dados est&atilde;o protegidos aqui no Bella da Semana. Por isso, relaxe: nosso sistema de criptografia oferece total seguran&ccedil;a para realizar compras</p>
-					</li>
-				</ol>
-				<ol>
-					<li dir="ltr" style="list-style-type: disc;">
-						<p dir="ltr"><a href="https://www.belladasemana.com.br/politica-de-privacidade" target="_blank" rel="noopener noreferrer" data-saferedirecturl="https://www.google.com/url?hl=pt-BR&amp;q=https://www.belladasemana.com.br/politica-de-privacidade&amp;source=gmail&amp;ust=1492610495579000&amp;usg=AFQjCNEYUvOrcbvbls8_OuiMHY-9F_byRg">Clique aqui</a>&nbsp;e saiba mais a sobre a nossa pol&iacute;tica de privacidade</p>
-					</li>
-					<li dir="ltr" style="list-style-type: disc;">
-						<p dir="ltr">Voc&ecirc; acessa fotos HD e v&iacute;deos em Foll HD</p>
-					</li>
-					<li dir="ltr" style="list-style-type: disc;">
-						<p dir="ltr">Nossos planos t&ecirc;m valores extremamente acess&iacute;veis (apenas R$ 24,99 por m&ecirc;s!)</p>
-					</li>
-					<li dir="ltr" style="list-style-type: disc;">
-						<p dir="ltr">O Clube Bella permite que o usu&aacute;rio aproveite descontos de at&eacute; 20% em lojas parceiras, vantagem concedida durante a vig&ecirc;ncia da assinatura</p>
-					</li>
-				</ol>
-				<p style="text-align: center; font-size: 15px;"><br /><br /></p>
-				<p dir="ltr">Confira nossos planos agora mesmo: assine a Bella da Semana e veja Vanessinha Vailatti nua em fotos de alta resolu&ccedil;&atilde;o!</p>
 
-				<p>&nbsp;</p>
-			</div>
-
-		</div>
-
-		<div class="assine-btl">
-			<a href="{{ route('assine.index') }}" style="width:30%; margin-right: auto">Assinar agora!</a>
-		</div>
+				{{ $essay->text }}
 
 	</div>
 

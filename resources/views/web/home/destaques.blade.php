@@ -43,7 +43,7 @@
 
             <h2>
 
-                <a class="boxhome bxd1" href="#">
+                <a class="boxhome bxd1" href="{{ route('modelos.photo', $essays[1]->url) }}">
                     <img src="//:0" title="ultima modelo" class="destaques secondSlide" width="300" height="220" style="background-image: url('{{ '/storage/home/' . $essays[1]->homes[0]->name }}')">
                     <span class="text no-label">{{ $essays[1]->name }}</span>
                 </a>
@@ -52,7 +52,7 @@
 
             <h2>
 
-                <a class="boxhome bxd2" href="#">
+                <a class="boxhome bxd2" href="{{ route('modelos.photo', $essays[2]->url) }}">
                     <img src="//:0" title="Mais modelos" class="destaques tirdSlide" width="300" height="220" style="background-image: url('{{ '/storage/home/' . $essays[2]->homes[0]->name }}')">
                     <span class="text no-label">{{ $essays[2]->name }}</span>
                 </a>

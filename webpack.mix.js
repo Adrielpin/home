@@ -24,13 +24,15 @@ const { mix } = require('laravel-mix');
 
  mix.scripts([
  	"resources/assets/js/old-javascript/libpack3.js",
- 	"resources/assets/js/old-javascript/base.js",
  	"resources/assets/js/old-javascript/translate.js",
+ 	"resources/assets/js/old-javascript/base.js",
  	"resources/assets/js/old-javascript/home.js",
  	"resources/assets/js/old-javascript/subscribe.js",
  	"resources/assets/js/old-javascript/ensaio.js",
  	"resources/assets/js/old-javascript/mb-menu.js",
- 	"resources/assets/js/new-javascript/*.js",
+ 	
+ 	"resources/assets/js/new-javascript/base.js",
+
  	],"public/assets/portal.js");
 
 // END PORTAL PACKEGE

@@ -7,8 +7,8 @@
 	<meta name="viewport" content="width=650, user-scalable=no">
 
 	<meta name="revisit-after" content="1">
-
-	{{-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> --}}
+	
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 
 	<script type="text/javascript" async="" src="https://d335luupugsy2.cloudfront.net/js/loader-scripts/65b9209b-888b-4829-9309-546b912ac4e6-loader.js"></script>
 
@@ -26,20 +26,19 @@
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
 	
-	<link rel="stylesheet" type="text/css" href="{{ asset('assets/portal.css') }}">
+	<link rel="stylesheet" type="text/css" href="/assets/portal.css">
 
-	<script type="text/javascript" src="{{ asset('assets/portal.js') }}"></script>
+	<script type="text/javascript" src="/assets/portal.js"></script>
 
 </head>
 
 <body class="br">
+	<script type="text/javascript" src="/assets/portal.js"></script>
 
 	<!-- Colocar o tag mananger aqui!!!! --> 
 
 	@yield('menu')
-
-
 	
 </body>
 
-</html>	
+</html>

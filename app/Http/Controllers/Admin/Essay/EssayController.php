@@ -68,7 +68,7 @@ class EssayController extends Controller
         foreach ($files as $k => $file) {
 
             $extFile = pathinfo($file->getClientOriginalName(),PATHINFO_EXTENSION);
-            $fileName = basename($file->getClientOriginalName(), '.'.$extFile);
+            $fileName = $e->name.basename($file->getClientOriginalName(), '.'.$extFile);
             $fileName = hash('md5', $fileName).'.'.$extFile;
 
             $p = new Essay_home();

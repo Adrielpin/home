@@ -54,7 +54,7 @@ class sectionController extends Controller
         $section->part_id = $partid;
         $section->save();
 
-        $part = $section->part->name;        
+        $essay = $section->part->essay->name;        
 
         $files = $request->file('images');
         $thumbs = $request->file('thumbs');
@@ -62,9 +62,8 @@ class sectionController extends Controller
         foreach ($files as $k => $file) {
 
             $extFile = pathinfo($file->getClientOriginalName(),PATHINFO_EXTENSION);
-            $fileName = basename($file->getClientOriginalName(), '.'.$extFile);
-            $fileName = hash('md5', $fileName).'.'.$extFile;
-
+            $fileName = $essay.'essay'.basename($file->getClientOriginalName(), '.'.$extFile);
+            $fileName = round(microtime(true) * 1000).hash('md5', $fileName).'.'.$extFile;
 
 
             $f = new Essay_photo();
@@ -73,9 +72,8 @@ class sectionController extends Controller
             Storage::disk('public')->put('essays/'.$fileName, file_get_contents($file));
 
             $extFile = pathinfo($thumbs[$k]->getClientOriginalName(),PATHINFO_EXTENSION);
-            $fileName = basename($thumbs[$k]->getClientOriginalName(), '.'.$extFile);
-            $fileName = hash('md5', $fileName).'.'.$extFile;
-
+            $fileName = $essay.'thumb'.basename($thumbs[$k]->getClientOriginalName(), '.'.$extFile);
+            $fileName = round(microtime(true) * 1000).hash('md5', $fileName).'.'.$extFile;
 
             $f->thumb = $fileName;
             $f->save();
@@ -85,17 +83,7 @@ class sectionController extends Controller
         }
 
         return redirect()->route('admin.essay.show.photos.parts.edit', [$id, $partid]);
-    }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
     }
 
     /**
@@ -105,12 +93,14 @@ class sectionController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function edit($id, $partid, $sectionid)
-    {   
+    {
+
         $section = Essay_section::find($sectionid);
         $part = $section->part;
         $essay = $part->essay;
 
         return view('admin.essay.photos.parts.sections.edit')->with(['essay' => $essay, 'part' => $part, 'section' => $section ]);
+
     }
 
     /**

@@ -3,8 +3,7 @@ var BellaClub = new Object();
 var pagType = 0;
 var pageExtraTracker = false;
 var pageExtraTracker2 = false;
-var isAM=0; var iUpSf=1;
-
+var isAM=0; var iUpSf=1; 
 BellaClub.getURL = function(obj_dom_id_, param_, metodo_, url_, hFF) {  
     if (URL_http == undefined) {
         URL_http = location.protocol+"//"+location.host;
@@ -69,7 +68,7 @@ BellaClub.hideAlphaBox = function() {
 var is18anos = false;
 
 BellaClub.clickAviso18 = function() {    
-    is18anos = false;    
+    is18anos = true;    
     var exdate=new Date(); exdate.setDate(exdate.getDate() + 30);
     document.cookie = 'bellaLN18=1; path=/; expires='+exdate.toUTCString();
     try {        
@@ -77,7 +76,6 @@ BellaClub.clickAviso18 = function() {
         $('div-alphabox').fade();
     } catch(e) {}
 };
-
 BellaClub.showAviso18 = function() {      
     if (!$('div-aviso18')) {               
         $('div-ups').insert({after: '<div id="div-aviso18" class="'+SUnitFolder+'"></div>'});      
@@ -88,10 +86,8 @@ BellaClub.showAviso18 = function() {
     Centralizar('div-aviso18', isAM); 
     $('div-aviso18').appear({duration:0.5}); 
 }; 
-
 BellaClub.goHome = function() { location.href="/"; };
-BellaClub.promptLogin = function(act_) {
-
+BellaClub.promptLogin = function(act_) {    
     document.body.style.cursor="default";    
     if ($('div-aviso18')) {  if ( $('div-aviso18').getStyle('display')!='none' ) { return; } }   
         
@@ -104,16 +100,15 @@ BellaClub.promptLogin = function(act_) {
         if (isAM==0) { $('fLogin').login.focus(); }
         if (act_ != null) { $('fLogin').action.value = act_; }
 };                                
-
 BellaClub.checkLogin = function(form_) {
     var msg_ = null;    
     var focus_ = null;
     if (form_==null) {form_="";}
     if ($('fLogin'+form_).pws.value=="") {
-        msg_ = aErros['senha'];focus_="password";
+        msg_ = aErros['senha'];focus_="pws";
     }   
     if ($('fLogin'+form_).login.value=="") {
-        msg_ = aErros['login'];focus_="email";
+        msg_ = aErros['login'];focus_="login";
     }       
     if (msg_) {     
         alert(msg_);        
@@ -124,7 +119,6 @@ BellaClub.checkLogin = function(form_) {
     BellaClub.getURL('div-login-act'+form_, $('fLogin'+form_).serialize(),'POST');  
     return false;
 };
-
 BellaClub.checkLogin2 = function(form_) {    
     var msg_ = null;    var focus_ = null;    if (form_==null) {form_="";}    
     if ($('fLogin'+form_).pws.value=="") {
