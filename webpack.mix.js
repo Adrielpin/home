@@ -32,6 +32,7 @@ const { mix } = require('laravel-mix');
  	"resources/assets/js/old-javascript/mb-menu.js",
  	
  	"resources/assets/js/new-javascript/base.js",
+ 	"resources/assets/js/new-javascript/ensaio.js",
 
  	],"public/assets/portal.js");
 

@@ -96,13 +96,13 @@
 
 					@foreach ($essay->parts as $p => $part)					
 
-					<ul class="partB" onclick="BellaAssay.toggleParts(this)">
+					<ul class="partB partM" name="{{ $p }}">
 
 						<li>{{ $part->name }}</li>
 
 					</ul>
 
-					<ul class="sections">
+					<ul class="sections" name="{{ $p }}" style="display: none">
 
 						@foreach ($part->sections as $s => $section)
 						
@@ -174,7 +174,7 @@
 					<div class="zoomSpacer"></div>
 
 					<a class="previous controls" rel="nofollow" onclick="BellaAssay.PassaFoto('-')"></a>
-					<a class="next controls" rel="nofollow" onclick="BellaAssay.PassaFoto('+')"></a>
+					<a class="next controls" rel="nofollow"></a>
 
 					<a class="bannerVerticalLateralFoto bannerCta" style="left:98px" href="{{ route('assine.index') }}"></a>
 					<a class="bannerVerticalLateralFoto bannerCta" style="left:778px" href="{{ route('assine.index') }}"></a>
@@ -200,32 +200,6 @@
 			background-repeat: no-repeat;
 		}
 	</style>     
-
-	<script type="text/javascript">
-		
-		jQuery(document).ready(function(){
-
-			jQuery('.isSec:first').show();
-
-			jQuery('.section a').click(function () {
-
-				jQuery('.isSec').hide();								
-				name = jQuery(this).attr('name');
-				jQuery('ul[name="' + name + '"]').show();
-
-			});
-
-			jQuery('.isSec li').click(function (event){
-
-				img = jQuery(this).attr('class');
-				jQuery('.imgView').css({'height': '100%', 'width': '100%', 'left': '0px','background-image':'url('+img+')'});
-
-			});
-
-		});
-
-		
-	</script>
 
 	<div class="div-conteudo">
 

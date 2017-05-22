@@ -28,12 +28,12 @@
 	
 	<link rel="stylesheet" type="text/css" href="/assets/portal.css">
 
-	<script type="text/javascript" src="/assets/portal.js"></script>
 
 </head>
 
 <body class="br">
-	<script type="text/javascript" src="/assets/portal.js"></script>
+	
+	<script type="text/javascript" src="{{ asset('/assets/portal.js') }}"></script>
 
 	<!-- Colocar o tag mananger aqui!!!! --> 
 
