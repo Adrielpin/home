@@ -108,7 +108,7 @@
 						
 						<li class="section s0">
 
-							<a class="on" name="{{$p.$s}}"> {{ $section->name }} </a>
+							<a name="{{$p.$s}}"> {{ $section->name }} </a>
 
 						</li>						
 
